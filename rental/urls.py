@@ -8,7 +8,8 @@ urlpatterns = [
     url(r'^$',views.choice,name='choice'),
     url(r'^home/$',views.index,name='home'),
     url(r'^landlord/profile/$',views.landlord_prof,name="landlord_profile"),
-]
+    url(r'^ajax/landlord/tenant/',views.ajax_choice,name="ajax-resp"),
+        ]
 
 if settings.DEBUG:
     urlpatterns += static( settings.MEDIA_URL, document_root=settings.MEDIA_ROOT )
