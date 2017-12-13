@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+.left {
+  position: fixed;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50px;
+  background: rgb(230, 73, 71);
+  transition: width ease .5s;
+}
+
+body.open-nav .left {
+  width: 250px;
+}
+
+.left ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.left ul li {
+  margin-bottom: 25px;
+}
+
+.left a {
+  color: #e64947;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color ease .35s, border-bottom-color ease .35s;
+}
+
+.left a:hover {
+  color: white;
+  border-bottom-color: white;
+}
+
+.left a.open {
+  font-size: 1.75rem;
+  font-weight: 700;
+  border: 0;
+}
+
+.right {
+  position: relative;
+  margin-left: 75px;
+  transition: margin-left ease .5s;
+}
+
+body.open-nav .right {
+  margin-left: 275px;
+}
+
+.icon {
+  height: 5vh;
+  margin-left: -4px;
+}
+
+hr {
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+hr.hrbar {
+  margin-bottom: 20px;
+  margin-top: -5px;
+  color: #dbdbdbc4;
+  background-color: #e8e8e8;
+  height: 5px;
+}
+
+img.img-responsive.view-img {
+  height: 9em;
+  width: 18em;
+  box-shadow: 5px 5px 10px;
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
+}
+
+img.img-responsive.white-img {
+  height: 9em;
+  width: 18em;
+  box-shadow: 5px 5px 10px;
+  /* border-bottom-right-radius: 9px; */
+  border-bottom-left-radius: 9px;
+}
+
+
+/* div.col-xs-12.col-sm-3.col-lg-3.col-md-3{
+padding: 3px;
+} */
+
+.bg-profile {
+  background-image: url('../img/bg-profile.png');
+  height: 50vh;
+  background-color: rgb(45, 85, 146);
+  background-size: cover;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.vl {
+  border-left: 6px solid green;
+  height: 500px;
+  margin-left: 30%;
+}
+
+.box-list ul li {
+  display: table-cell;
+  list-style: none;
+  border-right: 1px solid #dedede;
+}
+
+.box-list ul {
+  padding: 0;
+  display: inline-table;
+  width: 100%;
+  table-layout: fixed;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.box-list ul li:last-child {
+  border: none;
+}
+li{
+  text-align: center;
+}
