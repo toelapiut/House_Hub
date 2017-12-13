@@ -1,0 +1,64 @@
+.navbar {
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    z-index: 100;
+    -webkit-transition: background-color 1s ease 0s;
+    transition: background-color 1s ease 0s;
+}
+
+
+
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+    margin: 30px 5px 5px 5px;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:active,
+.navbar-default .navbar-nav>li>a:focus {
+    color: rgb(205, 202, 206);
+}
+
+/* .navbar-default .navbar-nav>li>a:visited {
+    color: #C57ED3;
+    text-decoration: none;
+} */
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    background-color: transparent;
+    color: #C57ED3;
+}
+
+
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #ffffff00;
+}
+
+
+/* Solid class attached on scroll past first section */
+
+/* .navbar.solid {
+    background-color: #490D40;
+    -webkit-transition: background-color 1s ease 0s;
+    transition: background-color 1s ease 0s;
+    box-shadow: 0 0 4px grey;
+} */
+
+.about h2 {
+    padding-top: 220px;
+}
+
+.about p {
+    padding: 20px 80px;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: none;
+    border-color: #e7e7e7;
+}
