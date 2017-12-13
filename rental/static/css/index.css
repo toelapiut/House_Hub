@@ -132,3 +132,20 @@ padding: 3px;
 li{
   text-align: center;
 }
+.cover_img{
+  background-image: url('../img/large.jpg');
+  height: 100vh;
+  background-color: rgb(45, 85, 146);
+  background-size: cover;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.right-side, .left-side {
+  padding-top: 50vh; 
+  width: 50%;
+  float: left
+  
+}
