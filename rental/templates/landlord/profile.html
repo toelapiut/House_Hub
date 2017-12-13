@@ -1,0 +1,52 @@
+{% extends 'inherited-temp/base.html' %} {% load staticfiles%} {% load bootstrap3%}
+
+<!-- Styles block -->
+{% block styles %} {{block.super}}
+<link rel="stylesheet" href="{% static 'css/index.css'%}"> {% endblock %} {% block content %} {{block.super}}
+<section>
+    <div class="bg-profile">
+        <div class="img">
+            <img src="{%static 'img/test.jpg'%}" alt="profile" class='img-responsive' style='height:5vh' srcset="">
+        </div>
+
+    </div>
+</section>
+<hr class='hrbar'>
+<section class="right">
+    <div class="box-list">
+        <ul>
+            <li>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae ducimus exercitationem velit, autem, commodi reiciendis laudantium
+                sit dolorem temporibus voluptas pariatur accusantium necessitatibus? Natus, obcaecati cum ut reprehenderit
+                facilis nulla.
+            </li>
+            <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, nemo vero. Et non pariatur suscipit recusandae ipsum
+                itaque, voluptate molestiae. Deleniti, eligendi fuga modi provident illo illum excepturi nemo minima!
+            </li>
+            <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ipsa, aperiam excepturi commodi vitae consectetur reiciendis
+                velit voluptates assumenda, magni ad dolorem culpa accusantium illo eligendi temporibus quisquam? Voluptatibus,
+                qui?
+            </li>
+        </ul>
+    </div>
+</section>
+<br>
+<br>
+<section class="right" style="background-color:rgb(243, 243, 243)">
+    <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
+<form action="/landlord/profile" method='post' enctype="multipart/form-data">
+{%csrf_token%}
+{% bootstrap_form form%}
+</form>
+    </div>
+    <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat laborum expedita soluta accusantium voluptate enim iusto quos labore quis commodi. Mollitia explicabo beatae quam maiores architecto sint voluptas similique delectus?</p>
+    </div>
+    <div class="col-xs-2 col-sm-2 col-lg-2 col-md-2">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum vitae, fuga eius quam laborum error? Numquam deleniti quasi similique excepturi fugit sed dolore quisquam sint, necessitatibus soluta facere omnis dolor!</p>
+    </div>
+</section>
+
+{% endblock %}
