@@ -54,3 +54,4 @@ class Room(models.Model):
 class Tenant(models.Model):
     house=models.ForeignKey(House,on_delete=models.CASCADE)
     user=models.ForeignKey(User, on_delete=models.CASCADE)
+
