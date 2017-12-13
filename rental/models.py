@@ -42,17 +42,15 @@ class Landlord_tenant(models.Model):
 class House(models.Model):
     house_name=models.CharField(max_length=15)
     landing_pic=models.ImageField(upload_to="profile-pic/", blank=False)
-    room_one=models.ImageField(upload_to="profile-pic/", blank=False)
-    room_two=models.ImageField(upload_to="profile-pic/", blank=False)
-    room_three=models.ImageField(upload_to="profile-pic/", blank=False)
-    room_three=models.ImageField(upload_to="profile-pic/", blank=False)
-    room_four=models.ImageField(upload_to="profile-pic/", blank=False)
-    room_five=models.ImageField(upload_to="profile-pic/", blank=False)
-    roomsix=models.ImageField(upload_to="profile-pic/", blank=False)
-    room_seven=models.ImageField(upload_to="profile-pic/", blank=False)
-    room_eigth=models.ImageField(upload_to="profile-pic/", blank=False)
-    room_nine=models.ImageField(upload_to="profile-pic/", blank=False)
-    room_ten=models.ImageField(upload_to="profile-pic/", blank=False)
-    room_eleven=models.ImageField(upload_to="profile-pic/", blank=False)
-    room_twelve=models.ImageField(upload_to="profile-pic/", blank=False)
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
+
+#house photo models
+class Room(models.Model):
+    room=models.ImageField(upload_to="profile-pic/", blank=False)
+    house=models.ForeignKey(House,on_delete=models.CASCADE)
+
+
+#tenants booking models
+class Tenant(models.Model):
+    house=models.ForeignKey(House,on_delete=models.CASCADE)
     user=models.ForeignKey(User, on_delete=models.CASCADE)
