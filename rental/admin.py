@@ -6,5 +6,4 @@ from .models import *
 admin.site.register(House)
 admin.site.register(Landlord_tenant)
 admin.site.register(Profile)
-admin.site.register(Tenant)
 
