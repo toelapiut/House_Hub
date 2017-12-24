@@ -1,0 +1,81 @@
+{%extends "registration/base.html"%} {% load bootstrap3 %} {% block content %}
+<!-- Content block -->
+{% block content %} {{block.super}}
+
+<div class="container">
+
+    <div class="row postRow">
+        <!-- Post Div -->
+
+        <div class="col-md-10 col-lg-10">
+
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+
+                    <img src="{{post.profile.url}}" alt="{{post.profile.user.username}}" class="img-responsive profilePicture">
+
+                    <h6 class="username">
+                        {{post.profile.user.username}}
+                    </h6>
+
+                    <h3 class="comment" style='float:right'>
+
+                        <a href="{%url 'comment' post.id%}">
+                            <img src="{%static 'img/comment.png'%}" alt="" style="height:4vh">
+                        </a>
+
+                    </h3>
+
+                </div>
+
+                <div class="panel-body" style="padding:0px">
+
+                    <img src="{{post.image.url}}" alt="{{post.caption}}" class="img-responsive postImage">
+
+                    <h5 class="text-center">
+                        {{post.caption}}
+                    </h5>
+
+                    {% for comment in comments %}
+
+                    <h5>
+
+                        <img src="{% static 'img/def.jpg'%}" alt="{{comment.user.username}}" class="img-responsive" style="height:7vh;border-radius:100%;width:5.6%">
+
+                        <span class="commentContent" style='margin-top:50px'>
+
+                            {{comment.comment_content}}
+
+                        </span>
+
+                    </h5>
+
+                    {% empty %}
+
+                    <h6>
+                        No Comments
+                    </h6>
+
+                    {% endfor %} {{likes}} {% if like %}
+                    <img src="{% static 'img/like.png'%}" alt="like" class='img-responsive' style="height:5vh;padding:5px 5px 5px;margin-top:-34px;"> {% else %}
+
+                    <a href="{%url 'liker' post.id%}">
+
+                        <img src="{% static 'img/unlike.png'%}" alt="like" class='img-responsive' style="height:5vh">
+
+                    </a>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

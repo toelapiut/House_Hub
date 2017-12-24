@@ -1,0 +1,18 @@
+{% extends 'inherited-temp/base.html' %} {% load staticfiles%} {% load bootstrap3%}
+
+<!-- Styles block -->
+{% block styles %} {{block.super}}
+<link rel="stylesheet" href="{% static 'css/index.css'%}"> {% endblock %} {% block content %} {{block.super}}
+
+<div class="index-wrapper">
+    <div class="container">
+            <div class="row">
+        {%for houses in house%}
+       <div class="col-md-4 col-sm-4 col-xs-4">
+          <a href="{% url 'image' house.id%}"><img src="{{houses.house_pic.url}}" alt="" srcset=""></a>
+       </div>
+            {%endfor%}
+        </div>
+    </div>
+</div>
+{% endblock %}

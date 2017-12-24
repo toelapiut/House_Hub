@@ -3,7 +3,9 @@
     <ul>
         <li>
             <a href="#">
-                <img src="{% static 'img/logo.png'%}" style="margin-left:-16%" class='icon' alt="profile">
+                <img src="{% static 'img/homeaway.svg  {%for rooms in room%}
+                <img src="{{rooms.room.url}}" alt="" srcset="">
+                {%endfor%}'%}" style="margin-left:-16%" class='icon' alt="profile">
             </a>
         </li>
         <hr>

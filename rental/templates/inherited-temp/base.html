@@ -16,13 +16,16 @@
     {% block styles %}
         {% bootstrap_css %}
         <link rel="stylesheet" href="{% static 'css/index.css'%}">
+        <link rel="stylesheet" href="{% static 'css/navbar.css'%}">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Poiret+One" rel="stylesheet">
     {% endblock %}
     
 </head>
 
 <body>
     <!-- Navbar -->
-    {% include 'inherited-temp/navbar.html' %}
+    {% include 'special/navbar.html' %}
 
     {% block content %}
     {% endblock %}
@@ -31,6 +34,11 @@
     
     {% block scripts %}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>       
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="{%static 'js/animatedModal.js-master/animatedModal.min.js'%}"></script>
         <script src="{% static 'js/index.js'%}"></script>
         {% bootstrap_javascript %}
     {% endblock %}

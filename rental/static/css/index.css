@@ -1,7 +1,9 @@
+/* font-family: 'Cormorant Garamond', serif;
+font-family: 'Poiret One', cursive; */
+
 * {
   box-sizing: border-box;
 }
-
 .left {
   position: fixed;
   padding: 10px;
@@ -95,9 +97,8 @@ padding: 3px;
 } */
 
 .bg-profile {
-  background-image: url('../img/bg-profile.png');
+  background-image: url('../img/large.jpg');
   height: 50vh;
-  background-color: rgb(45, 85, 146);
   background-size: cover;
   width: 100%;
   left: 0;
@@ -129,23 +130,100 @@ padding: 3px;
 .box-list ul li:last-child {
   border: none;
 }
-li{
+
+li {
   text-align: center;
 }
-.cover_img{
+
+.index-wrapper {
   background-image: url('../img/large.jpg');
   height: 100vh;
   background-color: rgb(45, 85, 146);
   background-size: cover;
+  background-attachment: fixed;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 0;
 }
 
-.right-side, .left-side {
-  padding-top: 50vh; 
-  width: 50%;
-  float: left
+#button_submit {
+  display: block;
+  width: 9em;
+  height: 44px;
+  padding: 0 19px;
+  background-color: white;
+  font-size: 15px;
+  line-height: 41px;
+  cursor: pointer;
+  border: 1px solid #0067db;
+  border-radius: 43px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+  transition: all .2s ease-in-out;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  color: #0067db;
+  transition: color .2s ease-in-out, opacity .2s ease-in-out;
+  float: left;
+}
+
+.property {
+  font-size: 14px;
+  background-color: #fff;
+  border-color: #2a6ebb;
+  color: #2a6ebb;
+  text-shadow: none;
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+  line-height: 22px;
+}
+
+#button_submit:hover {
+  webkit-filter: blur(4px);
+  /* Chrome, Safari, Opera */
+  filter: blur(2px);
+  background-color: None;
+}
+.center{
+  font-family: 'Poiret One', cursive;
+}
+text {
+  margin-top: 50%;
+  font-size: 46px;
+  color: white;
+  filter: url(#glow);
+  pointer-events: none;
+  text-shadow: 2px 2px 5px black;
+  font-family: 'Poiret One', cursive;
+}
+ 
+text {
+  font-size: 76px;
+  fill: currentColor;
+  filter: url(#glow);
+  pointer-events: none;
+  text-align: center;
+  font-family: 'Poiret One', cursive;
   
+}
+text.initial {
+visibility: hidden;
+}
+text.fade {
+  opacity: 0;
+  transition: opacity 3.5s ease-out;
+  -moz-transition: opacity 3.5s ease-out;
+  -webkit-transition: opacity 3.5s ease-out;
+  -o-transition: opacity 3.5s ease-out;
+}
+text.fadeIn {
+  opacity: 1 !important;
+}
+tspan.sup,
+tspan.sub {
+  font-size: 20px;
 }
